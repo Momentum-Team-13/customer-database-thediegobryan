@@ -1,0 +1,27 @@
+.client-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.client-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+    margin: 10px;
+    background-color: white;
+}
+
+.client-profile{
+    min-width: 100px;
+    border-radius: 50%;
+}
+
+.client-name{
+    margin: 3px;
+}
+
+.client-email{
+    color: gray;
+}
