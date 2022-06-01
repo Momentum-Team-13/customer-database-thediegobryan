@@ -9,9 +9,12 @@ for(customer of customers){
     customer_box.name = customer.name.first + " " + customer.name.last;
     customer_box.email = customer.email;
     customer_box.addressLine1 = customer.location.street.number + " " + customer.location.street.name;
-    customer_box.addressLine2 = customer.location.city + ", " + customer.location.state + ", " + customer.location.postcode
-    customer_box.dob = customer.dob.date;
-    customer_box.registered = customer.registered.date;
+    let state = nameToAbbr(customer.location.state)
+    customer_box.addressLine2 = customer.location.city + ", " + state + ", " + customer.location.postcode
+    let dobFormat = moment(customer.dob.date).format("MMM D YYYY");
+    customer_box.dob = dobFormat;
+    let registerdFormat = moment(customer.registered.date).format("MMM D YYYY");
+    customer_box.registered = registerdFormat;
     customerData.push(customer_box)
 }
 console.log(customerData)
